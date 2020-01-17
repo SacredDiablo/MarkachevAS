@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[6]:
-
-
 import sys
 import numpy as np
 file = open(sys.argv[1])
@@ -14,4 +11,3 @@ print ("%.2f" %max(data))
 print ("%.2f" %min(data))
 print ("%.2f" %np.average(data))
 file.close()
-

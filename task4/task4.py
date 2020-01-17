@@ -1,22 +1,11 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[11]:
-
-
 import sys
-
-
-# In[12]:
-
 
 text = open(sys.argv[1],'r')
 line = text.read().split("\n")
 text.close()
-
-
-# In[17]:
-
 
 #получение данных из файла, разбиение на приходящих и уходящих посетителей
 all_time = []
@@ -55,7 +44,7 @@ doubles = {element: count for element, count in counter.items()}
 for i in doubles:
     if doubles[i] == max(doubles.values()):
         end_data.append(i)        
-        
+#подсчет        
 prihod1 = []
 uhod1 =[]
 for i in range(len(end_data)):
@@ -78,15 +67,10 @@ for i in range(len(end_data)):
             uhod1.append(str((end_data[i])//60)+':'+str((end_data[i]+1)%60))
         else: 
             uhod1.append(str((end_data[i]+1)//60)+':00')
+#вывод
 print_end = []
 for i in range(len(prihod1)):
     print_end.append(str(prihod1[i])+' '+str(uhod1[i]))
 for i in range(len(print_end)):
     print(print_end[i])
-
-
-# In[ ]:
-
-
-
 

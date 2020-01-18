@@ -56,7 +56,7 @@ for i in range(len(end_data)):
             
     elif len(end_data)-1 > i > 0 and end_data[i+1]- end_data[i]>1:
         if ((end_data[i]+1)%60) > 0:
-            uhod1.append(str((end_data[i])//60)+':'+str((end_data[i])%60))
+            uhod1.append(str((end_data[i]+1)//60)+':'+str((end_data[i]+1)%60))
             prihod1.append(str((end_data[i+1])//60)+':'+str((end_data[i+1])%60))
         else: 
             uhod1.append(str((end_data[i]+1)//60)+':00')
